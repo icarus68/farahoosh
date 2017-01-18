@@ -1,0 +1,914 @@
+2016-11-17 09:27:28 [192.168.1.107][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+    in /var/www/farahosh/backend/views/layouts/main.php:76
+    in /var/www/farahosh/backend/controllers/SiteController.php:83
+2016-11-17 09:27:28 [192.168.1.107][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'g5mkhih3uh2inkubpctdpebmp3'
+    '_csrf-backend' => '350854e010358302aa7865b3fe79805591a5a0a75c329b42c831b7e924f1aa80a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ap3x_BhDCGJi-4X9sEZFIEgA1TUPpI4O\";}'
+    '_csrf-frontend' => '1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u\";}'
+    'advanced-backend' => 'j28gh0khnmhi2eeou5r6bad5v4'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/farahosh/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.1.102/farahosh/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g5mkhih3uh2inkubpctdpebmp3; _csrf-backend=350854e010358302aa7865b3fe79805591a5a0a75c329b42c831b7e924f1aa80a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ap3x_BhDCGJi-4X9sEZFIEgA1TUPpI4O%22%3B%7D; _csrf-frontend=1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u%22%3B%7D; advanced-backend=j28gh0khnmhi2eeou5r6bad5v4'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/farahosh/backend/web/index.php'
+    'REMOTE_PORT' => '33330'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/farahosh/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/farahosh/backend/web/index.php'
+    'PHP_SELF' => '/farahosh/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479374848.532
+    'REQUEST_TIME' => 1479374848
+]
+2016-11-17 09:27:56 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2003] Can't connect to MySQL server on '192.168.1.102' (111)' in /var/www/farahosh/vendor/yiisoft/yii2/db/Connection.php:602
+Stack trace:
+#0 /var/www/farahosh/vendor/yiisoft/yii2/db/Connection.php(602): PDO->__construct('mysql:host=192....', 'root', '', NULL)
+#1 /var/www/farahosh/vendor/yiisoft/yii2/db/Connection.php(544): yii\db\Connection->createPdoInstance()
+#2 /var/www/farahosh/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#3 /var/www/farahosh/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#4 /var/www/farahosh/vendor/yiisoft/yii2/db/Schema.php(478): yii\db\Connection->getSlavePdo()
+#5 /var/www/farahosh/vendor/yiisoft/yii2/db/Connection.php(759): yii\db\Schema->quoteValue('<span class="st...')
+#6 /var/www/farahosh/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 /var/www/farahosh/vendor/yiisoft/yii2/db/Command.php(869): yii\db\Command->getRawSql()
+#8 /var/www/farahosh/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#9 /var/www/farahosh/vendor/yiisoft/yii2/db/Query.php(247): yii\db\Command->queryOne()
+#10 /var/www/farahosh/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#11 /var/www/farahosh/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#12 /var/www/farahosh/common/models/User.php(83): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#13 /var/www/farahosh/common/models/LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#14 /var/www/farahosh/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#15 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#16 /var/www/farahosh/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#17 /var/www/farahosh/vendor/yiisoft/yii2/validators/Validator.php(265): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#18 /var/www/farahosh/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#19 /var/www/farahosh/common/models/LoginForm.php(58): yii\base\Model->validate()
+#20 /var/www/farahosh/backend/controllers/SiteController.php(78): common\models\LoginForm->login()
+#21 [internal function]: backend\controllers\SiteController->actionLogin()
+#22 /var/www/farahosh/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#23 /var/www/farahosh/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#24 /var/www/farahosh/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#25 /var/www/farahosh/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#26 /var/www/farahosh/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /var/www/farahosh/backend/web/index.php(17): yii\base\Application->run()
+#28 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2003] Can't connect to MySQL server on '192.168.1.102' (111)' in /var/www/farahosh/vendor/yiisoft/yii2/db/Connection.php:549
+Stack trace:
+#0 /var/www/farahosh/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#1 /var/www/farahosh/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#2 /var/www/farahosh/vendor/yiisoft/yii2/db/Schema.php(478): yii\db\Connection->getSlavePdo()
+#3 /var/www/farahosh/vendor/yiisoft/yii2/db/Connection.php(759): yii\db\Schema->quoteValue('<span class="st...')
+#4 /var/www/farahosh/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 /var/www/farahosh/vendor/yiisoft/yii2/db/Command.php(869): yii\db\Command->getRawSql()
+#6 /var/www/farahosh/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 /var/www/farahosh/vendor/yiisoft/yii2/db/Query.php(247): yii\db\Command->queryOne()
+#8 /var/www/farahosh/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#9 /var/www/farahosh/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#10 /var/www/farahosh/common/models/User.php(83): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#11 /var/www/farahosh/common/models/LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#12 /var/www/farahosh/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#13 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#14 /var/www/farahosh/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#15 /var/www/farahosh/vendor/yiisoft/yii2/validators/Validator.php(265): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#16 /var/www/farahosh/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#17 /var/www/farahosh/common/models/LoginForm.php(58): yii\base\Model->validate()
+#18 /var/www/farahosh/backend/controllers/SiteController.php(78): common\models\LoginForm->login()
+#19 [internal function]: backend\controllers\SiteController->actionLogin()
+#20 /var/www/farahosh/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#21 /var/www/farahosh/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#22 /var/www/farahosh/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#23 /var/www/farahosh/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#24 /var/www/farahosh/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /var/www/farahosh/backend/web/index.php(17): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2016-11-17 09:27:56 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+2016-11-17 09:27:56 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'N0hjcEh3VXdocDQFAlojBF0BVR59Ph9AfTw6JikeDR5jcQsdBlpmRQ=='
+    'LoginForm' => [
+        'username' => 'sd'
+        'password' => 'sd'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'g5mkhih3uh2inkubpctdpebmp3'
+    '_csrf-frontend' => '1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u\";}'
+    'advanced-backend' => 'j28gh0khnmhi2eeou5r6bad5v4'
+    '_csrf-backend' => '68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/farahosh/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '212'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://192.168.1.102'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.1.102/farahosh/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g5mkhih3uh2inkubpctdpebmp3; _csrf-frontend=1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u%22%3B%7D; advanced-backend=j28gh0khnmhi2eeou5r6bad5v4; _csrf-backend=68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/farahosh/backend/web/index.php'
+    'REMOTE_PORT' => '33342'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/farahosh/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/farahosh/backend/web/index.php'
+    'PHP_SELF' => '/farahosh/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479374876.215
+    'REQUEST_TIME' => 1479374876
+]
+2016-11-17 09:32:13 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][warning][yii\gii\Module::checkAccess] Access to Gii is denied due to IP address restriction. The requested IP is 192.168.1.107
+2016-11-17 09:32:13 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to access this page.' in /var/www/farahosh/vendor/yiisoft/yii2-gii/Module.php:112
+Stack trace:
+#0 /var/www/farahosh/vendor/yiisoft/yii2/base/Controller.php(142): yii\gii\Module->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/farahosh/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#2 /var/www/farahosh/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('gii', Array)
+#3 /var/www/farahosh/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/farahosh/backend/web/index.php(17): yii\base\Application->run()
+#5 {main}
+2016-11-17 09:32:13 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+    in /var/www/farahosh/backend/views/layouts/main.php:76
+2016-11-17 09:32:13 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'g5mkhih3uh2inkubpctdpebmp3'
+    '_csrf-frontend' => '1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u\";}'
+    'advanced-backend' => 'j28gh0khnmhi2eeou5r6bad5v4'
+    '_csrf-backend' => '68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/farahosh/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g5mkhih3uh2inkubpctdpebmp3; _csrf-frontend=1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u%22%3B%7D; advanced-backend=j28gh0khnmhi2eeou5r6bad5v4; _csrf-backend=68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/farahosh/backend/web/index.php'
+    'REMOTE_PORT' => '33566'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/farahosh/backend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/farahosh/backend/web/index.php'
+    'PHP_SELF' => '/farahosh/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479375133.718
+    'REQUEST_TIME' => 1479375133
+]
+2016-11-17 09:32:15 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][warning][yii\gii\Module::checkAccess] Access to Gii is denied due to IP address restriction. The requested IP is 192.168.1.107
+2016-11-17 09:32:15 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to access this page.' in /var/www/farahosh/vendor/yiisoft/yii2-gii/Module.php:112
+Stack trace:
+#0 /var/www/farahosh/vendor/yiisoft/yii2/base/Controller.php(142): yii\gii\Module->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/farahosh/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#2 /var/www/farahosh/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('gii', Array)
+#3 /var/www/farahosh/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/farahosh/backend/web/index.php(17): yii\base\Application->run()
+#5 {main}
+2016-11-17 09:32:15 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+    in /var/www/farahosh/backend/views/layouts/main.php:76
+2016-11-17 09:32:15 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'g5mkhih3uh2inkubpctdpebmp3'
+    '_csrf-frontend' => '1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u\";}'
+    'advanced-backend' => 'j28gh0khnmhi2eeou5r6bad5v4'
+    '_csrf-backend' => '68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/farahosh/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g5mkhih3uh2inkubpctdpebmp3; _csrf-frontend=1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u%22%3B%7D; advanced-backend=j28gh0khnmhi2eeou5r6bad5v4; _csrf-backend=68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/farahosh/backend/web/index.php'
+    'REMOTE_PORT' => '33568'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/farahosh/backend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/farahosh/backend/web/index.php'
+    'PHP_SELF' => '/farahosh/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479375135.165
+    'REQUEST_TIME' => 1479375135
+]
+2016-11-17 09:32:15 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][warning][yii\gii\Module::checkAccess] Access to Gii is denied due to IP address restriction. The requested IP is 192.168.1.107
+2016-11-17 09:32:15 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to access this page.' in /var/www/farahosh/vendor/yiisoft/yii2-gii/Module.php:112
+Stack trace:
+#0 /var/www/farahosh/vendor/yiisoft/yii2/base/Controller.php(142): yii\gii\Module->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/farahosh/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#2 /var/www/farahosh/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('gii', Array)
+#3 /var/www/farahosh/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/farahosh/backend/web/index.php(17): yii\base\Application->run()
+#5 {main}
+2016-11-17 09:32:15 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+    in /var/www/farahosh/backend/views/layouts/main.php:76
+2016-11-17 09:32:15 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'g5mkhih3uh2inkubpctdpebmp3'
+    '_csrf-frontend' => '1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u\";}'
+    'advanced-backend' => 'j28gh0khnmhi2eeou5r6bad5v4'
+    '_csrf-backend' => '68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/farahosh/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g5mkhih3uh2inkubpctdpebmp3; _csrf-frontend=1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u%22%3B%7D; advanced-backend=j28gh0khnmhi2eeou5r6bad5v4; _csrf-backend=68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/farahosh/backend/web/index.php'
+    'REMOTE_PORT' => '33572'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/farahosh/backend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/farahosh/backend/web/index.php'
+    'PHP_SELF' => '/farahosh/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479375135.67
+    'REQUEST_TIME' => 1479375135
+]
+2016-11-17 09:32:37 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][warning][yii\gii\Module::checkAccess] Access to Gii is denied due to IP address restriction. The requested IP is 192.168.1.107
+2016-11-17 09:32:37 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to access this page.' in /var/www/farahosh/vendor/yiisoft/yii2-gii/Module.php:112
+Stack trace:
+#0 /var/www/farahosh/vendor/yiisoft/yii2/base/Controller.php(142): yii\gii\Module->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/farahosh/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#2 /var/www/farahosh/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('gii', Array)
+#3 /var/www/farahosh/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/farahosh/backend/web/index.php(17): yii\base\Application->run()
+#5 {main}
+2016-11-17 09:32:37 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+    in /var/www/farahosh/backend/views/layouts/main.php:76
+2016-11-17 09:32:37 [192.168.1.107][-][j28gh0khnmhi2eeou5r6bad5v4][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'g5mkhih3uh2inkubpctdpebmp3'
+    '_csrf-frontend' => '1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u\";}'
+    'advanced-backend' => 'j28gh0khnmhi2eeou5r6bad5v4'
+    '_csrf-backend' => '68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/farahosh/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g5mkhih3uh2inkubpctdpebmp3; _csrf-frontend=1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u%22%3B%7D; advanced-backend=j28gh0khnmhi2eeou5r6bad5v4; _csrf-backend=68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/farahosh/backend/web/index.php'
+    'REMOTE_PORT' => '33580'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/farahosh/backend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/farahosh/backend/web/index.php'
+    'PHP_SELF' => '/farahosh/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479375157.542
+    'REQUEST_TIME' => 1479375157
+]
+2016-11-17 09:36:36 [192.168.1.107][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+2016-11-17 09:36:36 [192.168.1.107][-][-][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'g5mkhih3uh2inkubpctdpebmp3'
+    '_csrf-frontend' => '1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u\";}'
+    'advanced-backend' => 'j28gh0khnmhi2eeou5r6bad5v4'
+    '_csrf-backend' => '68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g5mkhih3uh2inkubpctdpebmp3; _csrf-frontend=1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u%22%3B%7D; advanced-backend=j28gh0khnmhi2eeou5r6bad5v4; _csrf-backend=68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/farahosh/backend/web/index.php'
+    'REMOTE_PORT' => '33682'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/farahosh/backend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/farahosh/backend/web/index.php'
+    'PHP_SELF' => '/farahosh/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479375396.23
+    'REQUEST_TIME' => 1479375396
+]
+2016-11-17 09:43:47 [192.168.1.107][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+2016-11-17 09:43:47 [192.168.1.107][-][-][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'g5mkhih3uh2inkubpctdpebmp3'
+    '_csrf-frontend' => '1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u\";}'
+    'advanced-backend' => 'j28gh0khnmhi2eeou5r6bad5v4'
+    '_csrf-backend' => '68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g5mkhih3uh2inkubpctdpebmp3; _csrf-frontend=1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u%22%3B%7D; advanced-backend=j28gh0khnmhi2eeou5r6bad5v4; _csrf-backend=68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/farahosh/backend/web/index.php'
+    'REMOTE_PORT' => '33886'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/farahosh/backend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/farahosh/backend/web/index.php'
+    'PHP_SELF' => '/farahosh/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479375827.001
+    'REQUEST_TIME' => 1479375827
+]
+2016-11-17 09:43:48 [192.168.1.107][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+2016-11-17 09:43:47 [192.168.1.107][-][-][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'g5mkhih3uh2inkubpctdpebmp3'
+    '_csrf-frontend' => '1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u\";}'
+    'advanced-backend' => 'j28gh0khnmhi2eeou5r6bad5v4'
+    '_csrf-backend' => '68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g5mkhih3uh2inkubpctdpebmp3; _csrf-frontend=1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u%22%3B%7D; advanced-backend=j28gh0khnmhi2eeou5r6bad5v4; _csrf-backend=68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/farahosh/backend/web/index.php'
+    'REMOTE_PORT' => '33890'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/farahosh/backend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/farahosh/backend/web/index.php'
+    'PHP_SELF' => '/farahosh/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479375827.982
+    'REQUEST_TIME' => 1479375827
+]
+2016-11-17 09:43:48 [192.168.1.107][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+2016-11-17 09:43:48 [192.168.1.107][-][-][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'g5mkhih3uh2inkubpctdpebmp3'
+    '_csrf-frontend' => '1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u\";}'
+    'advanced-backend' => 'j28gh0khnmhi2eeou5r6bad5v4'
+    '_csrf-backend' => '68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g5mkhih3uh2inkubpctdpebmp3; _csrf-frontend=1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u%22%3B%7D; advanced-backend=j28gh0khnmhi2eeou5r6bad5v4; _csrf-backend=68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/farahosh/backend/web/index.php'
+    'REMOTE_PORT' => '33888'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/farahosh/backend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/farahosh/backend/web/index.php'
+    'PHP_SELF' => '/farahosh/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479375828.674
+    'REQUEST_TIME' => 1479375828
+]
+2016-11-17 10:55:54 [192.168.1.107][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+2016-11-17 10:55:54 [192.168.1.107][-][-][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'g5mkhih3uh2inkubpctdpebmp3'
+    '_csrf-frontend' => '1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u\";}'
+    'advanced-backend' => 'j28gh0khnmhi2eeou5r6bad5v4'
+    '_csrf-backend' => '68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=g5mkhih3uh2inkubpctdpebmp3; _csrf-frontend=1d655d4806495bd2554f21dff0df6b9df8470afdbdab73d254116227236d580ca%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22P_LXCaXKfN2-sgbrF1I4_E7Dfe1Bsf2u%22%3B%7D; advanced-backend=j28gh0khnmhi2eeou5r6bad5v4; _csrf-backend=68288f4ebdf57d3705a3384191158fded450a1509e10535af76fae990aa82946a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22_8WuJ-vsjI6n5IJ7JtYVaiXiT9hmN-32%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/farahosh/backend/web/index.php'
+    'REMOTE_PORT' => '34980'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/farahosh/backend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/farahosh/backend/web/index.php'
+    'PHP_SELF' => '/farahosh/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1479380154.485
+    'REQUEST_TIME' => 1479380154
+]
+2016-11-18 16:09:07 [192.168.1.107][582dc8d474fece08c122ff63][k1gpamqndumcl42vo61fpjkfm7][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: /var/www/farahoosh/backend/views/site/email.php' in /var/www/farahoosh/vendor/yiisoft/yii2/base/View.php:227
+Stack trace:
+#0 /var/www/farahoosh/vendor/yiisoft/yii2/base/View.php(150): yii\base\View->renderFile('/var/www/faraho...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/farahoosh/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('email', Array, Object(backend\controllers\SiteController))
+#2 /var/www/farahoosh/backend/controllers/SiteController.php(80): yii\base\Controller->render('email')
+#3 [internal function]: backend\controllers\SiteController->actionEmail()
+#4 /var/www/farahoosh/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/farahoosh/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/farahoosh/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('email', Array)
+#7 /var/www/farahoosh/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('site/email', Array)
+#8 /var/www/farahoosh/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/farahoosh/backend/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2016-11-18 16:09:07 [192.168.1.107][582dc8d474fece08c122ff63][k1gpamqndumcl42vo61fpjkfm7][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+2016-11-18 16:09:07 [192.168.1.107][582dc8d474fece08c122ff63][k1gpamqndumcl42vo61fpjkfm7][info][application] $_COOKIE = [
+    'advanced-frontend' => '7rb3m6jm2ajm22791eakbetk37'
+    '_csrf-frontend' => '192a94c02dc3ae434f4e876728b10a648c800009e470083fc4e50908cee2e113a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"dV4TsrUaAZl8H5pBd2slPMIdIDeKwQyi\";}'
+    '_csrf-backend' => '6eb5a0f1d6acf4f4b99055354af9fd16a104a6dc38eafa390e670139799ee8aba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FN_yNphV7aU6P6MXuPq7yqOpXvLccfdU\";}'
+    'advanced-backend' => 'k1gpamqndumcl42vo61fpjkfm7'
+    '_identity-backend' => 'eb4b8abff54a6527b0450ff0afcc8cb15a173570666c5ed4d7ebfd012bcf3859a:2:{i:0;s:17:\"_identity-backend\";i:1;s:71:\"[\"582dc8d474fece08c122ff63\",\"hjJ-eyhd1Yb5cTq1tPVUuU5D46uYkH-c\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '582dc8d474fece08c122ff63'
+    '__expire' => 1479479947
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=7rb3m6jm2ajm22791eakbetk37; _csrf-frontend=192a94c02dc3ae434f4e876728b10a648c800009e470083fc4e50908cee2e113a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22dV4TsrUaAZl8H5pBd2slPMIdIDeKwQyi%22%3B%7D; _csrf-backend=6eb5a0f1d6acf4f4b99055354af9fd16a104a6dc38eafa390e670139799ee8aba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FN_yNphV7aU6P6MXuPq7yqOpXvLccfdU%22%3B%7D; advanced-backend=k1gpamqndumcl42vo61fpjkfm7; _identity-backend=eb4b8abff54a6527b0450ff0afcc8cb15a173570666c5ed4d7ebfd012bcf3859a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A71%3A%22%5B%22582dc8d474fece08c122ff63%22%2C%22hjJ-eyhd1Yb5cTq1tPVUuU5D46uYkH-c%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www/farahoosh/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/farahoosh/backend/web'
+    'SERVER_ADMIN' => 'info@farafekr.co'
+    'SCRIPT_FILENAME' => '/var/www/farahoosh/backend/web/index.php'
+    'REMOTE_PORT' => '43024'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/index.php/site/email'
+    'SCRIPT_NAME' => '/index.php'
+    'PATH_INFO' => '/site/email'
+    'PATH_TRANSLATED' => '/var/www/farahoosh/backend/web/site/email'
+    'PHP_SELF' => '/index.php/site/email'
+    'REQUEST_TIME_FLOAT' => 1479472747.821
+    'REQUEST_TIME' => 1479472747
+]
+2016-11-18 16:09:08 [192.168.1.107][582dc8d474fece08c122ff63][k1gpamqndumcl42vo61fpjkfm7][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: /var/www/farahoosh/backend/views/site/email.php' in /var/www/farahoosh/vendor/yiisoft/yii2/base/View.php:227
+Stack trace:
+#0 /var/www/farahoosh/vendor/yiisoft/yii2/base/View.php(150): yii\base\View->renderFile('/var/www/faraho...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/farahoosh/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('email', Array, Object(backend\controllers\SiteController))
+#2 /var/www/farahoosh/backend/controllers/SiteController.php(80): yii\base\Controller->render('email')
+#3 [internal function]: backend\controllers\SiteController->actionEmail()
+#4 /var/www/farahoosh/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/farahoosh/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/farahoosh/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('email', Array)
+#7 /var/www/farahoosh/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('site/email', Array)
+#8 /var/www/farahoosh/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/farahoosh/backend/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2016-11-18 16:09:08 [192.168.1.107][582dc8d474fece08c122ff63][k1gpamqndumcl42vo61fpjkfm7][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+2016-11-18 16:09:08 [192.168.1.107][582dc8d474fece08c122ff63][k1gpamqndumcl42vo61fpjkfm7][info][application] $_COOKIE = [
+    'advanced-frontend' => '7rb3m6jm2ajm22791eakbetk37'
+    '_csrf-frontend' => '192a94c02dc3ae434f4e876728b10a648c800009e470083fc4e50908cee2e113a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"dV4TsrUaAZl8H5pBd2slPMIdIDeKwQyi\";}'
+    '_csrf-backend' => '6eb5a0f1d6acf4f4b99055354af9fd16a104a6dc38eafa390e670139799ee8aba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FN_yNphV7aU6P6MXuPq7yqOpXvLccfdU\";}'
+    'advanced-backend' => 'k1gpamqndumcl42vo61fpjkfm7'
+    '_identity-backend' => 'eb4b8abff54a6527b0450ff0afcc8cb15a173570666c5ed4d7ebfd012bcf3859a:2:{i:0;s:17:\"_identity-backend\";i:1;s:71:\"[\"582dc8d474fece08c122ff63\",\"hjJ-eyhd1Yb5cTq1tPVUuU5D46uYkH-c\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '582dc8d474fece08c122ff63'
+    '__expire' => 1479479948
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=7rb3m6jm2ajm22791eakbetk37; _csrf-frontend=192a94c02dc3ae434f4e876728b10a648c800009e470083fc4e50908cee2e113a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22dV4TsrUaAZl8H5pBd2slPMIdIDeKwQyi%22%3B%7D; _csrf-backend=6eb5a0f1d6acf4f4b99055354af9fd16a104a6dc38eafa390e670139799ee8aba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FN_yNphV7aU6P6MXuPq7yqOpXvLccfdU%22%3B%7D; advanced-backend=k1gpamqndumcl42vo61fpjkfm7; _identity-backend=eb4b8abff54a6527b0450ff0afcc8cb15a173570666c5ed4d7ebfd012bcf3859a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A71%3A%22%5B%22582dc8d474fece08c122ff63%22%2C%22hjJ-eyhd1Yb5cTq1tPVUuU5D46uYkH-c%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www/farahoosh/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/farahoosh/backend/web'
+    'SERVER_ADMIN' => 'info@farafekr.co'
+    'SCRIPT_FILENAME' => '/var/www/farahoosh/backend/web/index.php'
+    'REMOTE_PORT' => '43026'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/index.php/site/email'
+    'SCRIPT_NAME' => '/index.php'
+    'PATH_INFO' => '/site/email'
+    'PATH_TRANSLATED' => '/var/www/farahoosh/backend/web/site/email'
+    'PHP_SELF' => '/index.php/site/email'
+    'REQUEST_TIME_FLOAT' => 1479472748.828
+    'REQUEST_TIME' => 1479472748
+]
+2016-11-18 16:09:09 [192.168.1.107][582dc8d474fece08c122ff63][k1gpamqndumcl42vo61fpjkfm7][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: /var/www/farahoosh/backend/views/site/email.php' in /var/www/farahoosh/vendor/yiisoft/yii2/base/View.php:227
+Stack trace:
+#0 /var/www/farahoosh/vendor/yiisoft/yii2/base/View.php(150): yii\base\View->renderFile('/var/www/faraho...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/farahoosh/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('email', Array, Object(backend\controllers\SiteController))
+#2 /var/www/farahoosh/backend/controllers/SiteController.php(80): yii\base\Controller->render('email')
+#3 [internal function]: backend\controllers\SiteController->actionEmail()
+#4 /var/www/farahoosh/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/farahoosh/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/farahoosh/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('email', Array)
+#7 /var/www/farahoosh/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('site/email', Array)
+#8 /var/www/farahoosh/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/farahoosh/backend/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2016-11-18 16:09:09 [192.168.1.107][582dc8d474fece08c122ff63][k1gpamqndumcl42vo61fpjkfm7][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+2016-11-18 16:09:09 [192.168.1.107][582dc8d474fece08c122ff63][k1gpamqndumcl42vo61fpjkfm7][info][application] $_COOKIE = [
+    'advanced-frontend' => '7rb3m6jm2ajm22791eakbetk37'
+    '_csrf-frontend' => '192a94c02dc3ae434f4e876728b10a648c800009e470083fc4e50908cee2e113a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"dV4TsrUaAZl8H5pBd2slPMIdIDeKwQyi\";}'
+    '_csrf-backend' => '6eb5a0f1d6acf4f4b99055354af9fd16a104a6dc38eafa390e670139799ee8aba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FN_yNphV7aU6P6MXuPq7yqOpXvLccfdU\";}'
+    'advanced-backend' => 'k1gpamqndumcl42vo61fpjkfm7'
+    '_identity-backend' => 'eb4b8abff54a6527b0450ff0afcc8cb15a173570666c5ed4d7ebfd012bcf3859a:2:{i:0;s:17:\"_identity-backend\";i:1;s:71:\"[\"582dc8d474fece08c122ff63\",\"hjJ-eyhd1Yb5cTq1tPVUuU5D46uYkH-c\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '582dc8d474fece08c122ff63'
+    '__expire' => 1479479949
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=7rb3m6jm2ajm22791eakbetk37; _csrf-frontend=192a94c02dc3ae434f4e876728b10a648c800009e470083fc4e50908cee2e113a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22dV4TsrUaAZl8H5pBd2slPMIdIDeKwQyi%22%3B%7D; _csrf-backend=6eb5a0f1d6acf4f4b99055354af9fd16a104a6dc38eafa390e670139799ee8aba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FN_yNphV7aU6P6MXuPq7yqOpXvLccfdU%22%3B%7D; advanced-backend=k1gpamqndumcl42vo61fpjkfm7; _identity-backend=eb4b8abff54a6527b0450ff0afcc8cb15a173570666c5ed4d7ebfd012bcf3859a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A71%3A%22%5B%22582dc8d474fece08c122ff63%22%2C%22hjJ-eyhd1Yb5cTq1tPVUuU5D46uYkH-c%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www/farahoosh/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/farahoosh/backend/web'
+    'SERVER_ADMIN' => 'info@farafekr.co'
+    'SCRIPT_FILENAME' => '/var/www/farahoosh/backend/web/index.php'
+    'REMOTE_PORT' => '43028'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/index.php/site/email'
+    'SCRIPT_NAME' => '/index.php'
+    'PATH_INFO' => '/site/email'
+    'PATH_TRANSLATED' => '/var/www/farahoosh/backend/web/site/email'
+    'PHP_SELF' => '/index.php/site/email'
+    'REQUEST_TIME_FLOAT' => 1479472749.69
+    'REQUEST_TIME' => 1479472749
+]
+2016-11-18 16:11:06 [192.168.1.107][582dc8d474fece08c122ff63][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.107
+    in /var/www/farahoosh/backend/views/layouts/main.php:200
+    in /var/www/farahoosh/backend/controllers/SiteController.php:80
+2016-11-18 16:11:06 [192.168.1.107][582dc8d474fece08c122ff63][-][info][application] $_COOKIE = [
+    'advanced-frontend' => '7rb3m6jm2ajm22791eakbetk37'
+    '_csrf-frontend' => '192a94c02dc3ae434f4e876728b10a648c800009e470083fc4e50908cee2e113a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"dV4TsrUaAZl8H5pBd2slPMIdIDeKwQyi\";}'
+    '_csrf-backend' => '6eb5a0f1d6acf4f4b99055354af9fd16a104a6dc38eafa390e670139799ee8aba:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"FN_yNphV7aU6P6MXuPq7yqOpXvLccfdU\";}'
+    'advanced-backend' => 'k1gpamqndumcl42vo61fpjkfm7'
+    '_identity-backend' => 'eb4b8abff54a6527b0450ff0afcc8cb15a173570666c5ed4d7ebfd012bcf3859a:2:{i:0;s:17:\"_identity-backend\";i:1;s:71:\"[\"582dc8d474fece08c122ff63\",\"hjJ-eyhd1Yb5cTq1tPVUuU5D46uYkH-c\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '582dc8d474fece08c122ff63'
+    '__expire' => 1479480066
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.1.102:81'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.113 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'advanced-frontend=7rb3m6jm2ajm22791eakbetk37; _csrf-frontend=192a94c02dc3ae434f4e876728b10a648c800009e470083fc4e50908cee2e113a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22dV4TsrUaAZl8H5pBd2slPMIdIDeKwQyi%22%3B%7D; _csrf-backend=6eb5a0f1d6acf4f4b99055354af9fd16a104a6dc38eafa390e670139799ee8aba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22FN_yNphV7aU6P6MXuPq7yqOpXvLccfdU%22%3B%7D; advanced-backend=k1gpamqndumcl42vo61fpjkfm7; _identity-backend=eb4b8abff54a6527b0450ff0afcc8cb15a173570666c5ed4d7ebfd012bcf3859a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A71%3A%22%5B%22582dc8d474fece08c122ff63%22%2C%22hjJ-eyhd1Yb5cTq1tPVUuU5D46uYkH-c%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Raspbian) Server at 192.168.1.102 Port 81</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Raspbian)'
+    'SERVER_NAME' => '192.168.1.102'
+    'SERVER_ADDR' => '192.168.1.102'
+    'SERVER_PORT' => '81'
+    'REMOTE_ADDR' => '192.168.1.107'
+    'DOCUMENT_ROOT' => '/var/www/farahoosh/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/farahoosh/backend/web'
+    'SERVER_ADMIN' => 'info@farafekr.co'
+    'SCRIPT_FILENAME' => '/var/www/farahoosh/backend/web/index.php'
+    'REMOTE_PORT' => '43052'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/index.php/site/email'
+    'SCRIPT_NAME' => '/index.php'
+    'PATH_INFO' => '/site/email'
+    'PATH_TRANSLATED' => '/var/www/farahoosh/backend/web/site/email'
+    'PHP_SELF' => '/index.php/site/email'
+    'REQUEST_TIME_FLOAT' => 1479472866.889
+    'REQUEST_TIME' => 1479472866
+]

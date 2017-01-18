@@ -1,0 +1,58 @@
+[
+    {
+        "name": "simpleenergy/php-webhdfs",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Degola/php-WebHDFS.git",
+            "reference": "01d3d17945c1c36c07df85f2e75471e1d7c8e467"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Degola/php-WebHDFS/zipball/01d3d17945c1c36c07df85f2e75471e1d7c8e467",
+            "reference": "01d3d17945c1c36c07df85f2e75471e1d7c8e467",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.4.0"
+        },
+        "time": "2015-08-07T09:32:21+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "org\\apache\\hadoop\\": "src/",
+                "org\\apache\\hadoop\\tools": "app/models/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "unknown"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Lagemann",
+                "email": "sebastian@iqu.com"
+            },
+            {
+                "name": "tranch-xiao",
+                "homepage": "https://github.com/tranch-xiao"
+            },
+            {
+                "name": "dshap",
+                "homepage": "https://github.com/dshap"
+            },
+            {
+                "name": "jacobko",
+                "homepage": "https://github.com/jacobko"
+            },
+            {
+                "name": "yosshi",
+                "homepage": "https://github.com/yosshi"
+            }
+        ],
+        "description": "PHP WebHDFS, forked from https://github.com/simpleenergy/php-WebHDFS"
+    }
+]

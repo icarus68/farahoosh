@@ -1,0 +1,23 @@
+/*------------------------------------------------------*/
+/*                  Font Face*/
+/*------------------------------------------------------*/
+@font-face {
+    font-family: "IRYekan";
+    src: url('../fonts/377563477-IRYekan.eot');
+    src: url('../fonts/377563477-IRYekan.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/377563477-IRYekan.svg#IRYekan') format('svg'),
+    url('../fonts/377563477-IRYekan.woff') format('woff'),
+    url('../fonts/377563477-IRYekan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "BMitra";
+    src: url('../fonts/BMitraBd.eot');
+    src: url('../fonts/BMitraBd.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BMitraBd.svg#B Mitra') format('svg'),
+    url('../fonts/BMitraBd.woff') format('woff'),
+    url('../fonts/BMitraBd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
